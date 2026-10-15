@@ -1,0 +1,80 @@
+﻿@using MudBlazor
+
+<MudNavMenu>
+    <MudNavGroup Title="Cadastros"
+                 Icon="@Icons.Material.Filled.AppRegistration"
+                 Expanded="true">
+
+        <MudNavLink Href="/Cadastro/ClienteGrade"
+                    Match="NavLinkMatch.Prefix"
+                    Icon="@Icons.Material.Filled.Person">
+            Cliente
+        </MudNavLink>
+    </MudNavGroup>
+    <MudNavGroup Title="Produto">
+        <MudNavLink Href="/produtos/produtograde" Match="NavLinkMatch.Prefix">Produto</MudNavLink>
+        <MudNavLink Href="/produtos/servicograde" Match="NavLinkMatch.Prefix">Serviço</MudNavLink>
+        <MudNavLink Href="/produtos/categoriagrade" Match="NavLinkMatch.Prefix">Categoria</MudNavLink>
+        <MudNavLink Href="/produtos/subcategoriagrade" Match="NavLinkMatch.Prefix">Sub Categoria</MudNavLink>
+        <MudNavLink Href="/produtos/tipoprodutograde" Match="NavLinkMatch.Prefix">Tipo de Produto</MudNavLink>
+        <MudNavLink Href="/produtos/unidademedidagrade" Match="NavLinkMatch.Prefix">Unidade de Medida</MudNavLink>
+    </MudNavGroup>
+    <MudNavGroup Title="Financeiro">
+        <MudNavLink Href="/Financeiro/Lancamento" Match="NavLinkMatch.Prefix">
+            <MudIcon Icon="@("fas fa-money-bill-alt")" Color="Color.Primary" Class="me-2" />
+            Contas a Pagar
+        </MudNavLink>
+        <MudNavLink Href=""/Financeiro/Lancamento" Match="NavLinkMatch.Prefix">
+            <MudIcon Icon="@("far fa-money-bill-alt")" Color="Color.Primary" Class="me-2" />
+            Contas a Receber
+        </MudNavLink>
+        <MudNavLink Href="/financeiro/contacorrentegrade" Match="NavLinkMatch.Prefix">Conta Corrente</MudNavLink>
+    </MudNavGroup>
+    <MudNavGroup Title="Usuários">
+        <MudNavLink Href="/Usuario/CadastroUsuariograde" Match="NavLinkMatch.Prefix">
+            <MudIcon Icon="@("fas fa-user")" Color="Color.Primary" Class="me-2" />
+            Usuários
+        </MudNavLink>
+        <MudNavLink Href="/Usuario/PerfilUsuario" Match="NavLinkMatch.Prefix">
+            <MudIcon Icon="@("fas fa-people-arrows")" Color="Color.Primary" Class="me-2" />
+            Perfil de Usuário
+        </MudNavLink>
+    </MudNavGroup>
+    <MudDivider />
+
+    <MudCard Class="pa-4"
+             Style="background-color:#7C3AED; color:white;">
+
+        <MudCardContent>
+            <MudText Typo="Typo.subtitle1">
+                Atalhos
+            </MudText>
+        </MudCardContent>
+
+        <MudCardActions>
+            <MudStack Row="true" Spacing="2">
+
+                <MudTooltip Text="Cadastro de Cliente"
+                            Placement="Placement.Bottom"
+                            Arrow="true">
+
+                    <MudIconButton Icon="@Icons.Material.Filled.Person"
+                                   Style="color:#E9D5FF;" />
+
+                </MudTooltip>
+
+                <MudTooltip Text="Cadastro de Produto"
+                            Placement="Placement.Bottom"
+                            Arrow="true">
+
+                    <MudIconButton Icon="@Icons.Material.Filled.Inventory2"
+                                   Style="color:#E9D5FF;" />
+
+                </MudTooltip>
+
+            </MudStack>
+        </MudCardActions>
+
+    </MudCard>
+    <MudSpacer />
+</MudNavMenu>

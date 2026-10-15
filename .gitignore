@@ -1,0 +1,122 @@
+# =========================
+# .NET / Visual Studio
+# =========================
+## Build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*.user
+*.suo
+*.userosscache
+*.userprefs
+*.dbmdl
+*.bak
+*.Backup
+*.tmp
+
+# IDE configs
+.vs/
+.vscode/
+.idea/
+
+# =========================
+# Blazor
+# =========================
+# Publicado em wwwroot/build ou publish
+wwwroot/*.gz
+wwwroot/*.br
+wwwroot/css/
+wwwroot/js/
+wwwroot/dist/
+wwwroot/build/
+wwwroot/_framework/
+
+# Client-side build (Blazor WASM)
+**/Client/bin/
+**/Client/obj/
+**/Client/wwwroot/css/
+**/Client/wwwroot/js/
+
+# =========================
+# ASP.NET Core
+# =========================
+project.lock.json
+project.fragment.lock.json
+artifacts/
+Properties/launchSettings.json
+
+# =========================
+# Entity Framework / SQLite
+# =========================
+*.mdf
+*.ldf
+*.ndf
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# Logs / Coverage / Others
+# =========================
+*.log
+logs/
+TestResult*/
+coverage/
+*.coverage
+*.coveragexml
+
+# =========================
+# NuGet / Packages
+# =========================
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+packages/
+*.PackageCache/
+.nuget/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# =========================
+# Rider / JetBrains
+# =========================
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# =========================
+# Docker
+# =========================
+*.pid
+*.seed
+docker-compose.override.yml
+
+# =========================
+# Secrets
+# =========================
+secrets.json
+appsettings.Development.json
+appsettings.Local.json

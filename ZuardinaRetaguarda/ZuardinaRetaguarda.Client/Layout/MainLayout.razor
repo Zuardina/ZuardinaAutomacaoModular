@@ -1,0 +1,98 @@
+﻿@inherits LayoutComponentBase
+@using MudBlazor
+
+<MudThemeProvider Theme="@TemaZuardina" />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+
+    <MudAppBar Elevation="1">
+
+        <MudIconButton Icon="@Icons.Material.Filled.Menu"
+                       Color="Color.Inherit"
+                       Edge="Edge.Start"
+                       OnClick="@DrawerToggle" />
+
+        <MudText Typo="Typo.h6">
+            Zuardina Retaguarda
+        </MudText>
+
+        <MudSpacer />
+
+        <MudText Typo="Typo.body2">
+            @NomeEmpresa
+        </MudText>
+
+        <MudTooltip Text="Empresa">
+            <MudIconButton Icon="@Icons.Material.Filled.CorporateFare"
+                           Color="Color.Inherit" />
+        </MudTooltip>
+
+    </MudAppBar>
+
+    <MudDrawer @bind-Open="flagComutaMenuLateral"
+               Variant="DrawerVariant.Persistent"
+               Elevation="1">
+
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">
+                Zuardina
+            </MudText>
+        </MudDrawerHeader>
+
+        <NavMenu />
+
+    </MudDrawer>
+
+    <MudMainContent>
+
+        <MudContainer MaxWidth="MaxWidth.False"
+                      Class="pa-6">
+
+            @Body
+
+        </MudContainer>
+
+    </MudMainContent>
+
+</MudLayout>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+@code {
+    private string NomeEmpresa => "Sem empresa ativa";
+    private bool flagComutaMenuLateral = true;
+
+    private void DrawerToggle()
+    {
+        flagComutaMenuLateral = !flagComutaMenuLateral;
+    }
+
+    private readonly MudTheme TemaZuardina = new()
+    {
+        PaletteLight = new PaletteLight
+        {
+            Primary = "#7C3AED",
+            Secondary = "#C4B5FD",
+
+            AppbarBackground = "#5B16A3",
+            AppbarText = "#FFFFFF",
+
+            DrawerBackground = "#5B16A3",
+            DrawerText = "#FFFFFF",
+            DrawerIcon = "#D8B4FE",
+
+            Background = "#F7F5FA",
+            Surface = "#FFFFFF",
+
+            TextPrimary = "#2D2433",
+            TextSecondary = "#6F6575"
+        }
+    };
+}
